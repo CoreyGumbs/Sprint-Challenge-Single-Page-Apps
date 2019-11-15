@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -6,8 +7,16 @@ export default function Header() {
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Characters</li>
+          <li>
+            <NavLink to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/characters/">
+              Characters
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
