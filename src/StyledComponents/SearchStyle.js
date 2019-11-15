@@ -31,7 +31,7 @@ export const SearchFormInput = styled.input.attrs({
     placeholder: 'Enter Character Name'
 
 })`
-    width: 80%;
+    width: 85%;
     padding: 10px;
     font-size: 1.3rem;
     border: 1px solid #ccc;
