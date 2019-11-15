@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+import CharacterCard  from './CharacterCard';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -14,14 +16,14 @@ export default function CharacterList() {
     })
     .catch(err => console.log(err));
   }, []);
-
   console.log(characters);
   return (
+
     <section className="character-list">
       <h2>TODO: `array.map()` over your state here!</h2>
       {
         characters.map(character => (
-          <p>{character.name}</p>
+          <CharacterCard character={character} key={character.id}/>
         ))
       }
     </section>
