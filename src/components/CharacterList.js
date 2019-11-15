@@ -23,7 +23,6 @@ export default function CharacterList(props) {
 
   return (
     <CharacterListSection>
-      <h2>Characters: </h2>
         {
           characters.map(character => (
             <CharacterCard character={character} />
