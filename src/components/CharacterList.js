@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard  from './CharacterCard';
 
-export default function CharacterList() {
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
+  const { query } = props;
   
 
   useEffect(() => {
@@ -13,12 +14,12 @@ export default function CharacterList() {
     axios.get('https://rickandmortyapi.com/api/character/')
     .then( response => {
       const results = response.data.results.filter(character =>
-        character.name.includes('Rick'));
+        character.name.includes(query));
       // setCharacters(response.data.results);
       console.log(results);
     })
     .catch(err => console.log(err));
-  }, []);
+  }, [query]);
 
   
   return (

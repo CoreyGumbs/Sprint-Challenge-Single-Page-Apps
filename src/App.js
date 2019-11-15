@@ -11,13 +11,18 @@ import {Route} from 'react-router-dom';
 
 export default function App() {
   const [query, setQuery] = useState("")
+  
+  const addQueryTerm = term =>{
+    setQuery(term);
+  }
   console.log(query);
+
   return (
     <main>
       <Route path="/" component={Header} />
       <Route exact path="/" component={WelcomePage}/>
       <Route path="/characters" render={props => (
-        <SearchForm {...props} setQuery={setQuery} />
+        <SearchForm {...props} addQueryTerm={addQueryTerm} />
       )} />
       <Route path="/characters/" render={props =>(
         <CharacterList {...props} query={query} />

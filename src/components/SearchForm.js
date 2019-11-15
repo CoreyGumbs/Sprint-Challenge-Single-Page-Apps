@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 export default function SearchForm(props) {
-  const {setQuery} = props;
+  const {addQueryTerm} = props;
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = e => {
     setSearchTerm(e.target.value);
-   setQuery(searchTerm);
+    addQueryTerm(searchTerm);
   }
 
   return (
