@@ -14,8 +14,8 @@ export default function CharacterList(props) {
     axios.get('https://rickandmortyapi.com/api/character/')
     .then( response => {
       const results = response.data.results.filter(character =>
-        character.name.includes(query));
-      // setCharacters(response.data.results);
+        character.name.toLowerCase().includes(query.toLowerCase()));
+      setCharacters(results);
       console.log(results);
     })
     .catch(err => console.log(err));
