@@ -15,11 +15,15 @@ export default function CharacterList() {
     .catch(err => console.log(err));
   }, []);
 
-  
   console.log(characters);
   return (
     <section className="character-list">
       <h2>TODO: `array.map()` over your state here!</h2>
+      {
+        characters.map(character => (
+          <p>{character.name}</p>
+        ))
+      }
     </section>
   );
 }
