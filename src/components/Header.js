@@ -1,24 +1,19 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
+import { RMHeader, Heading, HeaderNav} from '../StyledComponents/HeaderStyle';
 
 export default function Header() {
   return (
-    <header className="ui centered">
-      <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/characters/">
-              Characters
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <RMHeader>
+      <Heading>Rick &amp; Morty Fan Page</Heading>
+     <HeaderNav>
+        <NavLink to="/">
+          Home
+        </NavLink>
+        <NavLink to="/characters/">
+          Characters
+        </NavLink>
+      </HeaderNav>
+    </RMHeader>
   );
 }

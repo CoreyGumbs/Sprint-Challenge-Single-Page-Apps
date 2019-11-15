@@ -1,6 +1,9 @@
+import React from 'react';
 import { createGlobalStyle} from 'styled-components';
+import bgImg from '../imgs/megatree-bg.jpg';
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Schoolbell&display=swap');
 
     /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -26,12 +29,15 @@ html {
 
 body {
   margin: 0;
+  background: url(${bgImg}) top center / 100% 100% no-repeat fixed;
+
 }
 
 
 
 main {
   display: block;
+  
 }
 
 
