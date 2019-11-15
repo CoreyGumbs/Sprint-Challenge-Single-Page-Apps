@@ -21,9 +21,10 @@ export const HeaderNav = styled.nav`
     
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 
     & > a{
+        padding: 10px 20px;
         text-decoration: none;
         font-size: 3rem;
         font-family: 'Schoolbell', cursive;

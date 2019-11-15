@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {SearchFormSection, SearchFormStyle, SearchFormLabel, SearchFormInput} from '../StyledComponents/SearchStyle'
 
 export default function SearchForm(props) {
   const {addQueryTerm} = props;
@@ -10,10 +11,11 @@ export default function SearchForm(props) {
   }
 
   return (
-    <section className="search-form">
-     <form action="">
-       <input type="text" name="search" id="" value={searchTerm} onChange={handleChange} placeholder={'Enter Character Name'}/>
-     </form>
-    </section>
+    <SearchFormSection>
+     <SearchFormStyle>
+      <SearchFormLabel>Search By Name:</SearchFormLabel>
+        <SearchFormInput  value={searchTerm} onChange={handleChange}/>
+      </SearchFormStyle>
+    </SearchFormSection>
   );
 }

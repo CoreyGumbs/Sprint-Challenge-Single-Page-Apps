@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { createGlobalStyle} from 'styled-components';
 import bgImg from '../imgs/megatree-bg.jpg';
 
