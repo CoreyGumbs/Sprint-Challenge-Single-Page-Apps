@@ -3,6 +3,7 @@ import Header from "./components/Header.js";
 import WelcomePage from './components/WelcomePage';
 import SearchForm from './components/SearchForm';
 import CharacterList from './components/CharacterList';
+import GlobalStyle from './StyledComponents/GlobalStyle';
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <main>
+      <GlobalStyle />
       <Route path="/" component={Header} />
       <Route exact path="/" component={WelcomePage}/>
       <Route path="/characters" render={props => (
